@@ -1,0 +1,79 @@
+< !DOCTYPE html>
+<html lang="en" ng-app="calculatorApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-controller="calculatorController">
+    <div class="calculator">
+        <input type="text" ng-model="expression" readonly>
+        <div class="buttons">
+            <button ng-click="appendToExpression('7')">7</button>
+            <button ng-click="appendToExpression('8')">8</button>
+            <button ng-click="appendToExpression('9')">9</button>
+            <button ng-click="appendToExpression('/')">/</button>
+
+            <button ng-click="appendToExpression('4')">4</button>
+            <button ng-click="appendToExpression('5')">5</button>
+            <button ng-click="appendToExpression('6')">6</button>
+            <button ng-click="appendToExpression('')"></button>
+
+            <button ng-click="appendToExpression('1')">1</button>
+            <button ng-click="appendToExpression('2')">2</button>
+            <button ng-click="appendToExpression('3')">3</button>
+            <button ng-click="appendToExpression('-')">-</button>
+
+            <button ng-click="appendToExpression('0')">0</button>
+            <button ng-click="clearExpression()">C</button>
+            <button ng-click="calculateResult()">=</button>
+            <button ng-click="appendToExpression('+')">+</button>
+        </div>
+    </div>
+</body>
+</html>
+ body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.calculator {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: #2980b9;
+}
