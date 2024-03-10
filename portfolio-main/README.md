@@ -30,5 +30,5 @@ The Portfolio Website Project is aimed at providing you with a platform to highl
 
 ## Getting Started
 
-1. **Clone the Repository:** 
+1. **Clone the Repository:** https://github.com/Developerlokeshbhagat/own-portfolio/blob/main/portfolio-main/README.md
 2. **Open index.html file**
